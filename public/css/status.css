@@ -1,0 +1,5 @@
+.waiting-validation, .invalid, .valid {
+  width: 25px;
+  aspect-ratio: 1; 
+}
+

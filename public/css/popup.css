@@ -1,0 +1,121 @@
+:root {
+  --background-color: #f5f5f5;
+  --text-color: #333;
+  
+  --button-color: #fff;
+  --button-background-color: #007bff;
+  --button-hover-background-color: #0069d9;
+  
+  --separator-color: #e9ecef;
+  --scrollbar-color: #b0b3b6;
+  --scrollbar-hover-color: #d6d1d1;
+
+  --svg-filter: invert(21%) sepia(5%) saturate(0%) hue-rotate(217deg) brightness(87%) contrast(97%);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background-color: #333;
+    --text-color: #f5f5f5;
+    
+    --button-color: #fff;
+    --button-background-color: #007bff;
+    --button-hover-background-color: #0069d9;
+    
+    --separator-color: #444;
+    --scrollbar-color: #555;
+    --scrollbar-hover-color: #414141;
+
+    --svg-filter: invert(100%) sepia(5%) saturate(167%) hue-rotate(200deg) brightness(114%) contrast(92%);
+  }
+}
+
+
+body {
+  font-family: 'Arial', sans-serif;
+  padding-right: 20px;
+  padding-left: 20px;
+  width: 460px;
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.link-body {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border-top: var(--separator-color) 1px solid;
+}
+
+.link-body:last-child {
+  border-bottom: var(--separator-color) 1px solid;
+}
+
+.link-body .link {
+  flex-grow: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+button {
+  outline: none;
+  border: none;
+  border-radius: 20px;
+  padding: 10px 20px;
+  cursor: pointer;
+  background-color: var(--button-background-color);
+  color: var(--button-color);
+  white-space: nowrap;
+}
+
+button:hover {
+  background-color: var(--button-hover-background-color);
+}
+
+/* Styling scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--scrollbar-color);
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: var(--scrollbar-hover-color);
+}
+
+details {
+  border-bottom: var(--separator-color) 1px solid;
+}
+
+summary {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+details summary .link-group-icon{
+  width: 25px;
+  filter: var(--svg-filter);
+}
+
+details[open] summary .link-group-icon {
+  transform: rotate(180deg);
+}
