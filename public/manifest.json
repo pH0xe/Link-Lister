@@ -1,0 +1,29 @@
+{
+  "manifest_version": 3,
+  "name": "LinkLister",
+  "version": "0.0.1",
+  "description": "LinkLister is a chrome extension that allows you to easily view all the links on a web page.",
+  "icons": {
+    "16": "images/icon-16.png",
+    "32": "images/icon-32.png",
+    "48": "images/icon-48.png",
+    "128": "images/icon-128.png"
+  },
+  "action": {
+    "default_icon": {
+      "16": "images/icon-16.png",
+      "32": "images/icon-32.png",
+      "48": "images/icon-48.png",
+      "128": "images/icon-128.png"
+    },
+    "default_title": "LinkLister",
+    "default_popup": "view/popup.html"
+  },
+  "permissions": ["activeTab"],
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["js/content.js"]
+    }
+  ]
+}
