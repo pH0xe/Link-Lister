@@ -18,6 +18,12 @@ const sendMessageToContent = () => {
 
 const init = () => {
   sendMessageToContent();
+  document.getElementById('search-button')?.addEventListener('click', refresh);
+};
+
+const refresh = () => {
+  PopupDisplayService.instance.clearLinks();
+  sendMessageToContent();
 };
 
 document.addEventListener('DOMContentLoaded', init);

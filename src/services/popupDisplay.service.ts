@@ -25,6 +25,12 @@ export class PopupDisplayService {
     }
   }
 
+  clearLinks() {
+    const linksContainer = document.getElementById('link-list');
+    if (!linksContainer) return;
+    linksContainer.innerHTML = '';
+  }
+
   linksByType(links: Link[]): Map<SourceType, Link[]> {
     const linksByType = new Map<SourceType, Link[]>();
     links.forEach((link) => {
