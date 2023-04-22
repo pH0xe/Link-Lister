@@ -65,7 +65,9 @@ export class LinkItemComponent {
   }
 
   private openLink(link: Link) {
-    if (link.type === SourceType.ANCHOR) {
+    if (link.type === SourceType.MAIL) {
+      chrome.tabs.create({ url: `mailto:${link.url}` });
+    } else if (link.type === SourceType.ANCHOR) {
       chrome.tabs.update({ url: link.url });
     } else {
       chrome.tabs.create({ url: link.url });
