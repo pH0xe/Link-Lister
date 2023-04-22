@@ -1,7 +1,7 @@
 {
   "name": "link-lister",
   "version": "1.0.0",
-  "description": "",
+  "description": "Extension that extracts and list links from a web page into categories, providing easy access to copy, navigate, and validate links.",
   "main": "index.js",
   "scripts": {
     "lint": "eslint . --ext .ts",
