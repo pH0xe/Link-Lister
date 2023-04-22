@@ -27,8 +27,8 @@ export namespace SourceType {
   ): SourceType {
     // Mailto are ignored
     if (isAnchorLink) return SourceType.ANCHOR;
-    if (isBaseUrl) return SourceType.INTERNAL;
     if (isDocumentLink) return SourceType.DOCUMENT;
+    if (isBaseUrl) return SourceType.INTERNAL;
 
     return SourceType.EXTERNAL;
   }

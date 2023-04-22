@@ -1,5 +1,11 @@
-.waiting-validation, .invalid, .valid {
-  width: 25px;
-  aspect-ratio: 1; 
+.waiting, .waiting:hover, .waiting:focus, .waiting:active {
+  background-color: #F79F1F;
 }
 
+.invalid, .invalid:hover, .invalid:focus, .invalid:active {
+  background-color: #EA2027;
+}
+
+.valid, .valid:hover, .valid:focus, .valid:active {
+  background-color: #009432;
+}

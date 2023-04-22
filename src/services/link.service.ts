@@ -31,7 +31,7 @@ export class LinkService {
     if (!this.baseUrl || !this.currentUrl) {
       throw new Error('Urls not set');
     }
-    const links = [
+    let links = [
       ...this.getLinksFromAnchors(anchors),
       ...this.getLinksFromLinks(linksElements),
       ...this.getLinksFromImages(images),
@@ -41,7 +41,9 @@ export class LinkService {
       ...this.getMailsFromStrings(headMails, OriginType.HEAD),
       ...this.getMailsFromStrings(bodyMails, OriginType.BODY)
     ];
-    return this.uniqueLinks(links);
+    links = this.uniqueLinks(links);
+    links.forEach((link, index) => (link.id = index));
+    return links;
   }
 
   getLinksFromAnchors(anchors: HTMLAnchorElement[]): Link[] {

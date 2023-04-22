@@ -4,6 +4,7 @@ export class Link {
   // set by content script
   type!: SourceType;
   url!: string;
+  id!: number;
 
   constructor(obj: Partial<Link>) {
     Object.assign(this, obj);

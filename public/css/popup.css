@@ -46,7 +46,7 @@ header {
   align-items: center;
 }
 
-.link-body {
+.link-item {
   display: flex;
   align-items: center;
   gap: 10px;
@@ -55,14 +55,15 @@ header {
   border-top: var(--separator-color) 1px solid;
 }
 
-.link-body:last-child {
+.link-item:last-child {
   border-bottom: var(--separator-color) 1px solid;
 }
 
-.link-body .link {
+.link-item .link {
   flex-grow: 1;
   overflow: hidden;
   text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 button {
@@ -109,6 +110,8 @@ summary {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  cursor: pointer;
+  user-select: none;
 }
 
 details summary .link-group-icon{
