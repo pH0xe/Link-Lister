@@ -27,7 +27,7 @@ Link Lister is a powerful Chrome extension that lets you quickly extract and org
 
 To install Link Lister, follow these simple steps:
 
-- Go to the Chrome Web Store and search for **"[Link Lister]()"**
+- Go to the Chrome Web Store and search for **"[Link Lister](https://chrome.google.com/webstore/detail/linklister/jiilmlblopaafeoackclollophidingd)"**
 - Click on "Add to Chrome" to install the extension.
 - Once installed, the extension icon will appear next to your address bar.
 
